@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Veterinaria</title>
+</head>
+
+<body>
+
+<h1>Lista de Mascotas 🐶🐱</h1>
+
+<button onclick="cargarMascotas()">Ver Mascotas</button>
+
+<ul id="lista"></ul>
+
+<script>
+
+function cargarMascotas() {
+
+    fetch("/api/mascotas")
+    .then(response => response.json())
+    .then(data => {
+
+        const lista = document.getElementById("lista");
+        lista.innerHTML = "";
+
+        data.forEach(mascota => {
+
+            const item = document.createElement("li");
+
+            item.textContent =
+            mascota.nombre +
+            " - " +
+            mascota.especie +
+            " (" +
+            mascota.edad +
+            " años)";
+
+            lista.appendChild(item);
+
+        });
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
