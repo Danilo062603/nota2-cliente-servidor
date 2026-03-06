@@ -3,7 +3,7 @@
 ## Descripción
 
 Este proyecto implementa una **arquitectura cliente-servidor** usando Python para el servidor y HTML + JavaScript para el cliente.
-El sistema permite obtener datos desde un servidor mediante una API y mostrarlos en el navegador.
+El sistema permite obtener datos desde un servidor mediante una API y mostrarlos en el navegador
 
 El servidor maneja solicitudes HTTP y responde con información en formato **JSON**, que luego es procesada por el cliente.
 
