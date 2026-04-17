@@ -1,4 +1,5 @@
-function cargarMascotas(){
+#cliente.js
+  function cargarMascotas(){
 
 fetch("http://localhost:8000/api/mascotas")
 
